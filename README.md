@@ -3,40 +3,45 @@
 
 Click on a link to see how i set it up, where it runs and everything else which you need to know.
 
-* ### [Home Assistant]()
+* ### Home Assistant OS (latest)
+  * [Setup]()
+    * Running on Raspberry Pi 4
+* ### Gaming
+  * [Minecraft Server]() 
+    * Running on Ubuntu MacMini
 * ### MediaHUB
-  * [Sonarr V3]()
-  * [Radarr V3]()
-  * [NZBGet]()
-  * [Bazarr]()
-  * [NZBHydra2]()
+  * [Sonarr V3]() 
+    * Running on Synology 918+
+  * [Radarr V3]() 
+    * Running on Synology 918+
+  * [NZBGet]() 
+    * Running on Synology 918+
+  * [Bazarr]() 
+    * Running on Synology 918+
+  * [NZBHydra2]() 
+    * Running on Synology 918+
 * ### Utilities
-  * [Docker]()
-  * [Docker Compose]()
-  * [Portainer]()
-  * [Yacht]()
-  * [Heimdall]()
-  
-## Where runs what?
-* [Synology 918+]()
-  * [Sonarr]()
-  * [Radarr]()
-  * [NZBGet]()
-  * [NZBHydra2]()
+  * [Docker]() 
+    * Running on Synology 918+ and 
+    * Ubuntu MacMini
 
-* [WD PR4100]()
-  * [Media Files]()
-* [Raspberry Pi 4 (8G)](Home-Lab/RaspberryPi-4/README.md)
- * [Home Assistant]()
-* [Mac Mini 2012 (16GB RAM) running Ubuntu]()
- * [Minecraft Server]()
- * [Nginx Proxy Manager]()
- * [Yacht]()
+  * [Docker Compose]() 
+    * Running on Ubuntu MacMini
+  * [Portainer]() 
+    * Running on Ubuntu MacMini
+  * [Yacht]() 
+    * Running on Synology 918+ and 
+    * Ubuntu MacMini
+  * [Heimdall]()  
+    * Running on Ubuntu MacMini
+  * [Nginx Proxy Manager]() 
+    * Running on Ubuntu MacMini
+
  
 
 ## How do I back it Up?
 1. Everything backs up through [Active Backup for Business]()
- * [How do i back it up and where]()
+    * [How do i back it up and where]()
 2. Every X Days, my complete DS918+ gets backed up to a external Drive with [Hyper Backup]()
 3. PR4100 doesnt get Backed Up
 

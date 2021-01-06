@@ -2,17 +2,16 @@
 
 # Home Assistant install updated 06.01.21
 
-
 ## System Health
 
-version | 2020.12.2
+version | 2021.1.0
 -- | --
 installation_type | Home Assistant OS
 dev | false
 hassio | true
 docker | true
 virtualenv | false
-python_version | 3.8.6
+python_version | 3.8.7
 os_name | Linux
 os_version | 5.4.79-v8
 arch | aarch64
@@ -22,7 +21,7 @@ timezone | Europe/Zurich
 
 GitHub API | ok
 -- | --
-Github API Calls Remaining | 4960
+Github API Calls Remaining | 4816
 Installed Version | 1.9.0
 Stage | running
 Available Repositories | 711
@@ -48,7 +47,7 @@ update_channel | stable
 supervisor_version | 2020.12.7
 docker_version | 19.03.13
 disk_total | 57.8 GB
-disk_used | 16.9 GB
+disk_used | 18.2 GB
 healthy | true
 supported | true
 board | rpi4-64
