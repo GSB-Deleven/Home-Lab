@@ -1,0 +1,1 @@
+MacMini running Ubuntu 20.10

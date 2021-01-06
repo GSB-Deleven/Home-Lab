@@ -1,0 +1,1 @@
+Raspberry Pi 4 with 8GB RAM
