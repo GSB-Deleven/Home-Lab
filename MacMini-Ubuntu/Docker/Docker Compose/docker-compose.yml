@@ -1,0 +1,99 @@
+version: '3.2' 
+services:
+#############################################################################
+# PORTAINER
+#############################################################################
+  portainer:
+    container_name: portainer2
+    image: portainer/portainer-ce
+    volumes: 
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports: 
+      - "9000:9000"
+    restart: always
+#############################################################################
+# WATCHTOWER
+#############################################################################
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    command: --interval 30
+    restart: unless-stopped
+#############################################################################    
+# HEIMDALL
+#############################################################################
+  heimdall:
+    image: ghcr.io/linuxserver/heimdall
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Zurich
+    volumes:
+      - /home/deleven/docker/configs/heimdall:/config
+    ports:
+      - 8080:80
+      - 4443:443
+    restart: unless-stopped
+#############################################################################
+# NGINX PROXY MANAGER https://github.com/jlesage/docker-nginx-proxy-manager + https://www.youtube.com/watch?v=cI17WMKtntA
+# So you can make something like sonarr.deleven.ch, hide your Public IP with Cloudflare Proxie and acces it everywhere
+#############################################################################
+  nginx-proxy-manager:
+    image: jlesage/nginx-proxy-manager
+    build: .
+    ports:
+      - "81:8181"
+      - "80:8080"
+      - "443:4443"
+    volumes:
+      - "/home/deleven/docker/configs/nginx-proxy-manager:/config:rw"
+    restart: unless-stopped
+#############################################################################
+# Yacht 
+# Getting Started https://yacht.sh/Installation/gettingstarted/ 
+# GitHub: https://github.com/SelfhostedPro/Yacht
+# So you can make something like sonarr.deleven.ch, hide your Public IP with Cloudflare Proxie and acces it everywhere
+#############################################################################
+  yacht:
+    ports:
+        - '8001:8000'
+    volumes:
+        - '/var/run/docker.sock:/var/run/docker.sock'
+        - '/home/deleven/docker/configs/yacht:/config'
+    image: selfhostedpro/yacht
+    restart: unless-stopped
+#############################################################################
+#############################################################################
+############################################################################
+#
+# DISABLED CONTAINERS
+#
+############################################################################
+
+#ORGANIZR
+#  organizr:
+#    image: linuxserver/organizr
+#    container_name: organizr
+#    environment:
+#      - PUID=1000
+#      - PGID=1000
+#      - TZ=Europe/Zurich
+#    volumes:
+#      - /home/deleven/docker/configs/organizr:/config
+#    ports:
+#      - 9983:80
+#    restart: unless-stopped
+
+#Homeassistant without Services
+#  hass:
+#    container_name: hass
+#    image: homeassistant/home-assistant
+#    volumes: 
+#      - /home/deleven/docker/homeassistant:/config
+#      - /etc/letsencrypt:/certs
+#    restart: always
+#    network_mode: host

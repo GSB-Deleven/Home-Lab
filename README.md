@@ -1,27 +1,23 @@
-All the things which run in my Home
 
 ## What is running in my home
 
-* [Home Assistant]()
-  * [with DeconBee II]()
-  * [Node Red]()
-  * [DeconZ]()
-  * [HACS]()
-  * **List here the rest of the Addons** 
-* [MediaHUB]()
-  * [Sonarr]()
-  * [Radarr]()
+Click on a link to see how i set it up, where it runs and everything else which you need to know.
+
+* ### [Home Assistant]()
+* ### MediaHUB
+  * [Sonarr V3]()
+  * [Radarr V3]()
   * [NZBGet]()
-  * [Bazarr (Not Setup Yet)]()
+  * [Bazarr]()
   * [NZBHydra2]()
-* [Utilities]()
+* ### Utilities
   * [Docker]()
   * [Docker Compose]()
   * [Portainer]()
   * [Yacht]()
+  * [Heimdall]()
   
 ## Where runs what?
-
 * [Synology 918+]()
   * [Sonarr]()
   * [Radarr]()
@@ -30,7 +26,7 @@ All the things which run in my Home
 
 * [WD PR4100]()
   * [Media Files]()
-* [Raspberry Pi 4 (8G)]()
+* [Raspberry Pi 4 (8G)](Home-Lab/RaspberryPi-4/README.md)
  * [Home Assistant]()
 * [Mac Mini 2012 (16GB RAM) running Ubuntu]()
  * [Minecraft Server]()
